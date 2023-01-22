@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <button type="button" onclick="getLocation()">Get My Location</button>
+      </form>      
+    <script>
+        function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(position) {
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&key=AIzaSyDjS41uD_vZMcZNn0s7p9gBQ9AvDIA2LAs";
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      var address = data.results[0].formatted_address;
+      document.getElementById("address").value = address;
+    });
+}
+
+    </script>
+</body>
+</html>

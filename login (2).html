@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login (2).css" />
+    <title>Sign in & Sign up Form</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="user_login" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="user_pass2" placeholder="Password" />
+            </div>
+            <div onclick="validate()" class="btn">
+              Login
+
+              <!-- <input type="submit" class="btn" value="Sign up" /> -->
+            </div>
+            <!-- <input type="submit"  onclick="validate()" value="Login" class="btn solid" /> -->
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="fname" placeholder="First Name" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="lname" placeholder="Last Name" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="user_name" placeholder="Username" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="user_email" placeholder="Email" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Password" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="phone" id="phone" placeholder="Mobile" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="text" id="address" placeholder="Address" />
+            </div>
+            <!-- <div class="input-group mb-3" >
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" id="address" class="form-control" placeholder='Current Location' name="address">
+              <div class="input-group-append"> 
+                <button type="button" class="btn btn-sml py-0" style="padding: 5px 10px;  border-radius: 8px;"  onclick="getLocation()">Get My Location</button>
+              </div>
+              </div> -->
+              <div onclick="addlocal()" class="btn">
+                Sign Up
+
+                <!-- <input type="submit" class="btn" value="Sign up" /> -->
+              </div>
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              We can't wait to explore the world with you
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <!-- <img src="img/log.svg" class="image" alt="" /> -->
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Happy to see you again
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <!-- <img src="img/register.svg" class="image" alt="" /> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="geo.js"></script> -->
+    <!-- <script src="login (2).js"></script> -->
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+    </script>
+    <script>
+      window.onload=function(){
+        localStorage.setItem("k",1);
+      }
+
+
+      function addlocal(){
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var email=document.getElementById("user_email").value;
+        var username=document.getElementById("user_name").value;
+        var phone=document.getElementById("phone").value;
+        var password=document.getElementById("password").value;
+        var address=document.getElementById("address").value;
+        var obj={
+          fname:fname,
+          lname:lname,
+          email:email,
+          username:username,
+          phone:phone,
+          address:address,
+          password:password
+        }
+        window.alert(100);
+        var jobj=JSON.stringify(obj);
+        window.localStorage.setItem(email,jobj);
+        window.localStorage.setItem("k",window.localStorage.getItem(email));
+        window.location.href="index.html";
+      }
+
+      function validate(){
+                
+        var user=document.getElementById("user_login").value;
+        var password=document.getElementById("user_pass2").value;
+        if(window.localStorage.getItem(user)!==null){
+          alert(100);
+          window.localStorage.setItem("k",window.localStorage.getItem(user));
+          window.location.href="index.html";
+        }
+        else{
+          alert("Not Registered!plese signup...")
+        }
+      }
+
+
+
+    </script>
+  </body>
+</html>
