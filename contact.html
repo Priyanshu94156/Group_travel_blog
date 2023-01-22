@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nova Bootstrap Template - Contact</title>
+  <title>Pack Your Bags</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,33 +25,14 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <!-- <style>
-    /* Add a responsive class to the map container */
-    .map-container {
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 56.25%;
-      padding-top: 30px;
-      height: 0;
-    }
-    /* Make the iframe inside the container responsive */
-    .map-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style> -->
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Nova - v1.3.0
-  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .intro{
+      display: none;
+    }
+  </style>
+
 </head>
 
 <body class="page-contact">
@@ -61,9 +42,8 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="d-flex align-items-center">Nova</h1>
+        
+        <h1 class="d-flex align-items-center">Pack Your Bags</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -99,11 +79,20 @@
               <li><a href="portfolio.html">Himalayas</a></li>
             </ul>
           </li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li> -->
           <li><a href="contact.html">Contact</a></li>
+          <li class = "nav-item" id="intro1">
+            <a href = "login (2).html" class = "nav-link">Register</a>
+        </li>
+        <li class = "nav-item intro-tag intro" id="intro2">
+            <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
+        </li> 
+        <li class = "nav-item intro-tag intro" id="intro3">
+            <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
+        </li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
   </header><!-- End Header -->
@@ -163,7 +152,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -284,6 +273,27 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script>
+    window.onload=function(){
+
+        if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
+          // alert(100);
+            document.getElementById("intro1").className="nav-item intro";
+            document.getElementById("intro2").className="nav-item";
+            document.getElementById("intro3").className="nav-item";
+            var ans=JSON.parse(window.localStorage.getItem("k"));
+            document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
+        }
+    }
+    function logout(){
+      window.localStorage.setItem("k",1);
+      document.getElementById("Intro1").className="nav-item";
+      document.getElementById("intro2").className="nav-item intro-tag";
+      document.getElementById("intro3").className="nav-item intro-tag";
+      
+
+    }
+</script>
   <script src="assets/js/main.js"></script>
 
 </body>

@@ -25,6 +25,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" id="user_pass2" placeholder="Password" />
             </div>
+            
             <div onclick="validate()" class="btn">
               Login
 
@@ -84,11 +85,12 @@
                 <button type="button" class="btn btn-sml py-0" style="padding: 5px 10px;  border-radius: 8px;"  onclick="getLocation()">Get My Location</button>
               </div>
               </div> -->
-              <div onclick="addlocal()" class="btn">
+              <input type="submit" onclick="addlocal()" class="btn" value="Sign Up" >
+             <!-- <div onclick="addlocal()" class="btn">
                 Sign Up
 
-                <!-- <input type="submit" class="btn" value="Sign up" /> -->
-              </div>
+                <input type="submit" class="btn" value="Sign up" />
+              </div> -->
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -175,7 +177,7 @@ sign_in_btn.addEventListener("click", () => {
           address:address,
           password:password
         }
-        window.alert(100);
+        // window.alert(100);
         var jobj=JSON.stringify(obj);
         window.localStorage.setItem(email,jobj);
         window.localStorage.setItem("k",window.localStorage.getItem(email));
@@ -187,9 +189,17 @@ sign_in_btn.addEventListener("click", () => {
         var user=document.getElementById("user_login").value;
         var password=document.getElementById("user_pass2").value;
         if(window.localStorage.getItem(user)!==null){
-          alert(100);
+          var obj=JSON.parse(window.localStorage.getItem(user));
+          if(obj.password==password){
+
+          
+          // alert(100);
           window.localStorage.setItem("k",window.localStorage.getItem(user));
           window.location.href="index.html";
+          }
+          else{
+            alert("wrong pasword");
+          }
         }
         else{
           alert("Not Registered!plese signup...")

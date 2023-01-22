@@ -18,19 +18,19 @@ const actionBtn = document.getElementById('showMe');
 const locationsAvailable = document.getElementById('locationList');
 let Gmap, Gmarker;
 
-const __KEY = "AIzaSyDjS41uD_vZMcZNn0s7p9gBQ9AvDIA2LAs";
+// const __KEY = "AIzaSyDjS41uD_vZMcZNn0s7p9gBQ9AvDIA2LAs";
 
-actionBtn.addEventListener('click', e => {
-  // hide the button 
-  actionBtn.style.display = "none";
+// actionBtn.addEventListener('click', e => {
+//   // hide the button 
+//   actionBtn.style.display = "none";
 
-  // call Materialize toast to update user 
-  M.toast({ html: 'I am fetching your current location', classes: 'rounded' });
+//   // call Materialize toast to update user 
+//   M.toast({ html: 'I am fetching your current location', classes: 'rounded' });
 
-  // get the user's position
-  getLocation();
+//   // get the user's position
+//   getLocation();
 
-});
+// });
 
 getLocation = () => {
   if (navigator.geolocation) {

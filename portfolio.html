@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nova Bootstrap Template - Portfolio</title>
+  <title>Pack Your Bags</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,13 +28,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .intro{
+      display: none;
+    }
+  </style>
 
-  <!-- =======================================================
-  * Template Name: Nova - v1.3.0
-  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="page-portfolio">
@@ -46,7 +45,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="d-flex align-items-center">Nova</h1>
+        <h1 class="d-flex align-items-center">Pack Your Bags</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -82,11 +81,20 @@
               <li><a href="portfolio.html">Himalayas</a></li>
             </ul>
           </li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <!-- <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li> -->
           <li><a href="contact.html">Contact</a></li>
+          <li class = "nav-item" id="intro1">
+            <a href = "login (2).html" class = "nav-link">Register</a>
+        </li>
+        <li class = "nav-item intro-tag intro" id="intro2">
+            <a href = "profile.html" class = "nav-link" id="introuser">Hello user!</a>
+        </li> 
+        <li class = "nav-item intro-tag intro" id="intro3">
+            <a href = "index.html"  class="nav-link" id="logout" onclick="logout()">Logout</a>
+        </li>
         </ul>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
   </header><!-- End Header -->
@@ -126,7 +134,7 @@
              <a href="inner dest.html"> <img src="assets/img/portfolio/charminar.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Hyderabad</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
                 <a href="assets/img/portfolio/charminar.jpg" title="Hyderabad" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div></a>
@@ -136,8 +144,8 @@
               <img src="assets/img/portfolio/maldives.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Maldives</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/maldives.jpg" title="app 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/maldives.jpg" title="Maldives" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -146,8 +154,8 @@
               <img src="assets/img/portfolio/delhi.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Delhi</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/delhi.jpg" title="app 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/delhi.jpg" title="Delhi" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -156,8 +164,8 @@
               <img src="assets/img/portfolio/Kerala.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Kerala</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/Kerala.webp" title="app 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/Kerala.webp" title="Kerala" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -166,8 +174,8 @@
               <img src="assets/img/portfolio/bangl.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Banglore</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/bangl.webp" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/bangl.webp" title="Banglore" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -176,8 +184,8 @@
               <img src="assets/img/portfolio/vizag.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Visakhapatnam</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/vizag.jpg" title="app 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/vizag.jpg" title="Visakhapatnam" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -186,8 +194,8 @@
               <img src="assets/img/portfolio/paris.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Paris</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/paris.jpg" title="app 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/paris.jpg" title="Paris" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -196,8 +204,8 @@
               <img src="assets/img/portfolio/himalayas.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Himalayas</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/himalayas.webp" title="app 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/himalayas.webp" title="Himalayas" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -206,8 +214,8 @@
               <img src="assets/img/portfolio/mumbai.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Mumbai</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/mumbai.jpeg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/mumbai.jpeg" title="Mumbai" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -216,8 +224,8 @@
               <img src="assets/img/portfolio/kedar.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Kedarnath</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/kedar.jpg" title="app 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/kedar.jpg" title="Kedarnath" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -226,8 +234,8 @@
               <img src="assets/img/portfolio/kolkata.webp" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>kolkata</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/kolkata.webp" title="app 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/kolkata.webp" title="Kolkata" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -236,8 +244,8 @@
               <img src="assets/img/portfolio/seven.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>The Seven Wonders</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/portfolio/seven.jpg" title="app 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p> -->
+                <a href="assets/img/portfolio/seven.jpg" title="Seven Wonders Of The World" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
               </div>
             </div><!-- End Portfolio Item -->
@@ -336,6 +344,27 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script>
+    window.onload=function(){
+
+        if(window.localStorage.getItem("k")!=null && window.localStorage.getItem("k")!=1){
+          // alert(100);
+            document.getElementById("intro1").className="nav-item intro";
+            document.getElementById("intro2").className="nav-item";
+            document.getElementById("intro3").className="nav-item";
+            var ans=JSON.parse(window.localStorage.getItem("k"));
+            document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
+        }
+    }
+    function logout(){
+      window.localStorage.setItem("k",1);
+      document.getElementById("Intro1").className="nav-item";
+      document.getElementById("intro2").className="nav-item intro-tag";
+      document.getElementById("intro3").className="nav-item intro-tag";
+      
+
+    }
+</script>
   <script src="assets/js/main.js"></script>
 
 </body>
