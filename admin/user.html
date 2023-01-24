@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Tables</title>
+    <title>Users</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -121,9 +121,10 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
+                                <!-- <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." /> -->
+                                <button class="btn btn-info" style="color: blue;" type="HOME">
+                                    <a href="../index.html"><div style="color:white">HOME</div></a>
+                                    <!-- <i class="zmdi zmdi-search"></i> -->
                                 </button>
                             </form>
                             <div class="header-button">
@@ -299,48 +300,24 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">data table</h3>
                                 <div class="table-data__tool">
-                                    <div class="table-data__tool-left">
-                                        <div class="rs-select2--light rs-select2--md">
-                                            <select class="js-select2" name="property">
-                                                <option selected="selected">All Properties</option>
-                                                <option value="">Option 1</option>
-                                                <option value="">Option 2</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <div class="rs-select2--light rs-select2--sm">
-                                            <select class="js-select2" name="time">
-                                                <option selected="selected">Today</option>
-                                                <option value="">3 Days</option>
-                                                <option value="">1 Week</option>
-                                            </select>
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                        <button class="au-btn-filter">
-                                            <i class="zmdi zmdi-filter-list"></i>filters</button>
-                                    </div>
                                     <div class="table-data__tool-right">
                                         <button class="au-btn au-btn-icon au-btn--green au-btn--small">
                                             <i class="zmdi zmdi-plus"></i>add item</button>
                                         <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                                            <select class="js-select2" name="type">
+                                            <!-- <select class="js-select2" name="type">
                                                 <option selected="selected">Delete</option>
                                                 
-                                            </select>
+                                            </select> -->
                                             <div class="dropDownSelect2"></div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
-                                                <th>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </th>
+                                                
                                                 <th>name</th>
                                                 <th>email</th>
                                                 <th>phone number</th>
@@ -352,12 +329,7 @@
                                         </thead>
                                         <tbody id="add_user">
                                             <tr class="tr-shadow">
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
+                                                
                                                 <td id="fname">FIRST</td>
                                                 <td>
                                                     <span class="block-email" id="email">SAMPLE@EMAIL.COM</span>
@@ -403,48 +375,7 @@
     </div>
 
 
-
-    <script>
-        let ar2=[]
-            if(localStorage.getItem("usd")) ar2=JSON.parse(localStorage.getItem("usd"))
-            for(let {fname,lname,email,username,phone,address} of ar2)
-            {
-                document.querySelector('#add_user').innerHTML+=`<tr class="tr-shadow">
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
-                                                <td id="fname">${fname}</td>
-                                                <td>
-                                                    <span class="block-email" id="email">${email}</span>
-                                                </td>
-                                                <td class="desc" id="phone">${phone}</td>
-                                                
-                                                <td>
-                                                    <span class="status--process" id="address"></span>
-                                                </td>
-                                                <td>${address}</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>`}
-    </script>
-    <!-- Jquery JS-->
+    <script src="js/user.js"></script>
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
