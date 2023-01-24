@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+
+</head>
+<body>
+    <form action="">
+        <input type="text" id="service" placeholder="service name">
+        <input type="text" id="desc" placeholder="description">
+        <div><button onclick="fun()">submit</button></div> 
+    </form>
+    <div><button onclick="user()">user details</button></div>
+
+    <div class="row mt-2" id="details">
+        <b><div class="col-md-6"><label class="labels">First Name</label></b><h6 id="fname"></h6></div>
+        <b><div class="col-md-6"><label class="labels">Last Name</label></b><div id="lname"></div></div>
+    
+        <b><div class="col-md-12"><label class="labels">Mobile Number</b></label><div id="phone"></div></div>
+        <b><div class="col-md-12"><label class="labels">Address Line</label></b><div id="address"></div></div>
+        
+        <b><div class="col-md-12"><label class="labels">Email ID</label></b><div id="email"></div></div>
+        
+    </div>
+    
+
+    <div id="user"></div>
+    <script>
+
+        function fun(){
+            let serviceArr=[];
+            if(localStorage.getItem('services')!=null)
+                serviceArr=JSON.parse(localStorage.getItem('services'));
+            var serviceName=document.getElementById("service").value;
+            var serviceDescription=document.getElementById("desc").value;
+            var ob={
+                serviceName:serviceName,
+                serviceDescription:serviceDescription,
+            }
+            serviceArr.push(ob);
+            
+            // var arr = [{name:"heelo", description:"this is"}]
+            alert('ADDED SERVICE');
+            // for(let i = 0; i < arr.length; i++){
+            // }
+            window.localStorage.setItem('services',JSON.stringify(serviceArr));
+         
+        }
+
+        function user(){
+            let ar2=[]
+            if(localStorage.getItem("usd")) ar2=JSON.parse(localStorage.getItem("usd"))
+            for(let {fname,lname,email,username,phone,address} of ar2)
+            {
+                document.querySelector('#details').innerHTML+=`<b><div class="col-md-6"><label class="labels">${fname}</label></b><h6 id="fname"></h6></div>
+        <b><div class="col-md-6"><label class="labels">${lname}</label></b><div id="lname"></div></div>
+    
+        <b><div class="col-md-12"><label class="labels">${phone}</b></label><div id="phone"></div></div>
+        <b><div class="col-md-12"><label class="labels">${address}</label></b><div id="address"></div></div>
+        
+        <b><div class="col-md-12"><label class="labels">${email}</label></b><div id="email"></div></div><br>`
+        
+        }
+            // var obj=window.localStorage.getItem("k");
+            // var res=JSON.parse(obj);
+            // document.getElementById("fname").innerHTML=res.fname;
+            // document.getElementById("lname").innerHTML=res.lname;
+            // document.getElementById("phone").innerHTML=res.phone;
+            // document.getElementById("email").innerHTML=res.email;
+            // document.getElementById("email2").innerHTML=res.email;
+            // document.getElementById("address").innerHTML=res.address;
+        }
+
+
+        
+    </script>
+</body>
+</html>

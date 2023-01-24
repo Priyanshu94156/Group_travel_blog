@@ -158,9 +158,15 @@ sign_in_btn.addEventListener("click", () => {
       window.onload=function(){
         localStorage.setItem("k",1);
       }
+      
 
+      
 
       function addlocal(){
+        if(localStorage.getItem("usd")==null){
+          localStorage.setItem("usd",JSON.stringify([]))
+        }
+        var usda=JSON.parse(localStorage.getItem("usd"));
         var fname=document.getElementById("fname").value;
         var lname=document.getElementById("lname").value;
         var email=document.getElementById("user_email").value;
@@ -177,13 +183,25 @@ sign_in_btn.addEventListener("click", () => {
           address:address,
           password:password
         }
-        // window.alert(100);
+        usda.push(obj);
+
+      
+
+        // var dat=JSON.stringify(usd);
+        // window.localStorage.setItem(email,dat);
+        window.localStorage.setItem("usd",JSON.stringify(usda));
+        
+        // window.localStorage.setItem("log",);
+
+         window.alert("sign Up Successful");
         var jobj=JSON.stringify(obj);
         window.localStorage.setItem(email,jobj);
         window.localStorage.setItem("k",window.localStorage.getItem(email));
+        
         window.location.href="index.html";
       }
 
+      
       function validate(){
                 
         var user=document.getElementById("user_login").value;
