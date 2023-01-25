@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Users</title>
+    <title>Tables</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -42,9 +42,12 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
+                        <a class="navbar-brand" href="/">
+                            <div class="logo-image">
+                                  <img src="images/icon/logo.png" class = "img-responsive">
+                            </div>
+                      </a>
+                        
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -60,18 +63,22 @@
                             <a class="js-arrow" href="index.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li class="active">
+                      
+                       
+                       
+                        <li>
                             <a href="user.html">
                                 <i class="fas fa-table"></i>Users</a>
+                        </li>
+                        <li class="active">
+                            <a href="form.html">
+                                <i class="fas fa-table"></i>Checkout</a>
                         </li>
                         <li>
                             <a href="service.html">
                                 <i class="fas fa-chart-bar"></i>Services</a>
                         </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="fas fa-table"></i>Checkout</a>
-                        </li>
+                      
                         <li>
                             <a href="destination.html">
                                 <i class="far fa-check-square"></i>Destination</a>
@@ -84,11 +91,12 @@
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
-                </a>
-            </div>
+            <a class="navbar-brand" href="/">
+                <div class="logo-image">
+                      <img src="images/icon/logo.png" class = "img-responsive">
+                </div>
+          </a>
+            
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
@@ -96,19 +104,24 @@
                             <a class="js-arrow" href="index.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>   
                         </li>
-                        <li class="active">
+                      
+                      
+
+                        <li>
                             <a href="user.html">
                                 <i class="fas fa-table"></i>Users</a>
                         </li>
-
+                         
                         <li>
                             <a href="service.html">
                                 <i class="fas fa-chart-bar"></i>Services</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="form.html">
                                 <i class="fas fa-table"></i>Checkout</a>
                         </li>
+
+                        
                         <li>
                             <a href="destination.html">
                                 <i class="far fa-check-square"></i>Destination</a>
@@ -127,12 +140,10 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <!-- <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." /> -->
-                                <button class="btn btn-info" style="color: blue;" type="HOME">
-                                    <a href="../index.html"><div style="color:white">HOME</div></a>
-                                    <!-- <i class="zmdi zmdi-search"></i> -->
-                                </button>
+                                <a href=../index.html class="button2"><input type=button value=''>HOME</a>
+                                
                             </form>
+                            
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <!-- <div class="noti__item js-item-menu">
@@ -306,19 +317,9 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">data table</h3>
                                 <div class="table-data__tool">
-                                    <div class="table-data__tool-right">
-                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>add item</button>
-                                        <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
-                                            <!-- <select class="js-select2" name="type">
-                                                <option selected="selected">Delete</option>
-                                                
-                                            </select> -->
-                                            <div class="dropDownSelect2"></div>
-                                        </div>
-                                    </div>
+                                    
+                                    
                                 </div>
-
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
                                         <thead>
@@ -328,41 +329,15 @@
                                                 <th>email</th>
                                                 <th>phone number</th>
                                                 <th></th>
-                                                <th>address</th>
+                                                <th>message</th>
                                                 <th></th>
                                                 <th></th>
+                                               
+                                                
                                             </tr>
                                         </thead>
                                         <tbody id="add_user">
-                                            <tr class="tr-shadow">
-                                                
-                                                <td id="fname">FIRST</td>
-                                                <td>
-                                                    <span class="block-email" id="email">SAMPLE@EMAIL.COM</span>
-                                                </td>
-                                                <td class="desc" id="phone">12345678</td>
-                                                
-                                                <td>
-                                                    <span class="status--process" id="address"></span>
-                                                </td>
-                                                <td id="address">DarwinBox--Hyderabad</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <!--  -->
                                             
                                         </tbody>
                                     </table>
@@ -381,7 +356,44 @@
     </div>
 
 
-    <script src="js/user.js"></script>
+
+    <script>
+        let ar2=[]
+            if(localStorage.getItem("fd")) ar2=JSON.parse(localStorage.getItem("fd"))
+            for(let {name,email,phone,message} of ar2)
+            {
+                document.querySelector('#add_user').innerHTML+=`<tr class="tr-shadow">
+                                                
+                                                <td id="name">${name}</td>
+                                                <td>
+                                                    <span class="block-email" id="email">${email}</span>
+                                                </td>
+                                                <td class="desc" id="typenumber">${phone}</td>
+                                                <td>
+                                                    <span class="status--process" id="message"></span>
+                                                </td>
+                                                <td id="message">${message}</td>
+                                                <td>
+                                                
+                                               
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                            <i class="zmdi zmdi-mail-send"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>`}
+    </script>
+    <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>

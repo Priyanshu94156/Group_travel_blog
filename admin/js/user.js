@@ -36,12 +36,6 @@ p.onload=function(){
 };
 p.send();
 
-
-
-
-
-
-
 let ar2=[]
 if(localStorage.getItem("usd")) ar2=JSON.parse(localStorage.getItem("usd"))
 for(let {fname,lname,email,username,phone,address} of ar2)

@@ -118,21 +118,27 @@
                 <div class="row mb-3" style="margin-top: 3%">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="name-input" type="name">
+                    <input class="form-control" id="name" type="name">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" >
+                    <input type="email" id="email" class="form-control" >
                   </div>
                 </div>
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Phone Number</label>
                     <div class="col-sm-10">
-                      <input type="tel" id="typeNumber" class="form-control">
+                      <input type="tel" id="typenumber" class="form-control">
                     </div>
                   </div>
+                  <div class="row mb-3">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">message</label>
+                    <div class="col-sm-10">
+                      <input type="message" id="message" class="form-control" >
+                    </div>
+                    </div>
         
                 <div class="row mb-3">
                   <div class="col-sm-10 offset-sm-2">
@@ -166,10 +172,14 @@
                           Photography
                         </label>
                       </div>
+                      
                     </div>
+                   
+                    
                   </div>
                 </div class="container">
-                <button id="try" class="btn btn-primary mb-5"
+                
+                <button id="try" onclick="addl()" class="btn btn-primary mb-5"
                 style="margin-left:40%">Submit</button>
               </form>
             </div>
@@ -278,8 +288,52 @@
       
 
     }
+    </script>
+     <script>
+      const submit_btn = document.querySelector("#try");
+
+const container = document.querySelector(".container");
+
+submit_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
+
+
+    </script>
+    <script>
+      
+      
+    function addl(){
+        if(localStorage.getItem("fd")==null){
+          localStorage.setItem("fd",JSON.stringify([]))
+        }
+        var fda=JSON.parse(localStorage.getItem("fd"));
+        var name=document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var phone=document.getElementById("typenumber").value;
+        var message=document.getElementById("message").value;
+       
+        
+        var obj={
+          name:name,
+          email:email,
+          phone:phone,
+          message:message
+          
+        
+        }
+        console.log(obj);
+        fda.push(obj);
+        window.localStorage.setItem("fd",JSON.stringify(fda));
+        
+        // window.localStorage.setItem("log",);
+
+        window.alert(" Successful");
+      
+      }
+
 </script>
-  <script src="app.js"></script>
+  <!-- <script src="app.js"></script> -->
   <script src="assets/js/main.js"></script>
 
 </body>
