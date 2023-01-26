@@ -263,8 +263,7 @@
                                             <label for="description">Description</label>
                                             <textarea class="form-control" id="desc" rows="3"></textarea>
                                           </div>
-                                        
-                                          <button class="btn btn-primary" onclick="fun()">Add</button>
+                                          <button class="btn btn-primary" onclick=post_req() id="add_service">Add</button>
                                     </div>
                                     </div>
                                 </div>
@@ -275,8 +274,7 @@
         <!-- END PAGE CONTAINER-->
 
     </div>
-
-    <script>
+    <!-- <script>
         function fun(){
             let serviceArr=[];
             if(localStorage.getItem('services')!=null)
@@ -313,7 +311,7 @@ for(let {serviceName,serviceDescription} of arr2)
                                         </div>`
 }
         }
-    </script>
+    </script> -->
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
@@ -337,6 +335,7 @@ for(let {serviceName,serviceDescription} of arr2)
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script src="js/service.js"></script>
 
 </body>
 

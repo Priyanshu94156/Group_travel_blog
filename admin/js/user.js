@@ -1,7 +1,7 @@
-const p= new XMLHttpRequest();
-p.open("GET","https://reqres.in/api/users?page=2");
-p.onload=function(){
-    dt=JSON.parse(p.responseText);
+const pp= new XMLHttpRequest();
+pp.open("GET","https://reqres.in/api/users?page=2");
+pp.onload=function(){
+    dt=JSON.parse(pp.responseText);
     for(let i = 0; i < dt.data.length; i++){
         document.querySelector('#add_user').innerHTML+=`<tr class="tr-shadow">
         
@@ -34,11 +34,11 @@ p.onload=function(){
     </tr>`
     }
 };
-p.send();
+pp.send();
 
-let ar2=[]
-if(localStorage.getItem("usd")) ar2=JSON.parse(localStorage.getItem("usd"))
-for(let {fname,lname,email,username,phone,address} of ar2)
+let arr2=[]
+if(localStorage.getItem("usd")) arr2=JSON.parse(localStorage.getItem("usd"))
+for(let {fname,lname,email,username,phone,address} of arr2)
 {
     document.querySelector('#add_user').innerHTML+=`<tr class="tr-shadow">
                                     

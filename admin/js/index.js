@@ -36,6 +36,22 @@ p.onload=function(){
 };
 p.send();
 
+document.getElementById("extra").onclick = post_req;
+function post_req(){ 
+data ={
+        email:"Priyanshu chaudhary",
+        pass:"Hello"
+    }
+    data=JSON.stringify(data)
+    p.open("POST", "https://reqres.in/api/users")
+    p.setRequestHeader("content-type", 'application/Json')
+    p.send(data)
+    p.onload = function(){
+        console.log(data)
+    }
+    alert("Data Sent successfully")
+}
+
 let ar2=[]
 if(localStorage.getItem("usd")) ar2=JSON.parse(localStorage.getItem("usd"))
 for(let {fname,lname,email,username,phone,address} of ar2)

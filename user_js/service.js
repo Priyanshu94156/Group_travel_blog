@@ -1,3 +1,4 @@
+var xyz= new XMLHttpRequest();
 
     window.onload=function(){
 
@@ -11,18 +12,18 @@
             document.getElementById("introuser").innerHTML="Hello "+ans.fname+"!";
         }
     }
-    let arr=[];
-if(localStorage.getItem('services')) arr=JSON.parse(localStorage.getItem('services'))
-for(let {serviceName,serviceDescription} of arr)
-{
-  document.querySelector('#add_more').innerHTML+=`<div id="hotel-accomodation" class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase" style="color: #f57813;"></i></div>
-            <div>
-              <h4 class="title"><a href="form.html">${serviceName}</a></h4>
-              <p class="description">${serviceDescription}</p>
-            </div>
-          </div>`
-}
+//     let arr=[];
+// if(localStorage.getItem('services')) arr=JSON.parse(localStorage.getItem('services'))
+// for(let {serviceName,serviceDescription} of arr)
+// {
+//   document.querySelector('#add_more').innerHTML+=`<div id="hotel-accomodation" class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+//             <div class="icon flex-shrink-0"><i class="bi bi-briefcase" style="color: #f57813;"></i></div>
+//             <div>
+//               <h4 class="title"><a href="form.html">${serviceName}</a></h4>
+//               <p class="description">${serviceDescription}</p>
+//             </div>
+//           </div>`
+// }
     function logout(){
       window.localStorage.setItem("k",1);
       document.getElementById("Intro1").className="nav-item";
@@ -31,10 +32,26 @@ for(let {serviceName,serviceDescription} of arr)
       
 
     }
-    // window.onload=function(){
 
-// if(window.localStorage.getItem("services")!=null && window.localStorage.getItem("services")!=1){
-//   alert(100);
+get_req()
 
-// }
-// }
+
+function get_req(){
+  xyz.open('GET','http://localhost:3000/')
+  xyz.send();
+  xyz.onload=function(){
+      dt=JSON.parse(xyz.responseText);
+      
+      console.log(dt)
+  for(let i = 0; i < dt.length; i++){
+      document.querySelector('#add_more').innerHTML+=`<div id="hotel-accomodation" class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon flex-shrink-0"><i class="bi bi-briefcase" style="color: #f57813;"></i></div>
+      <div>
+        <h4 class="title"><a href="form.html">${dt[i].name}</a></h4>
+        <p class="description">${dt[i].description}</p>
+      </div>
+    </div>`
+
+    }
+    }
+}
